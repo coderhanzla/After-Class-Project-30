@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Validtion In JS</h2>
+    <form name="MyForm" onsubmit="Validate()">
+       Name: <input type="text" name="name"> <br><br>
+        Age: <input type="number" name="age" min="18"> <br><br>
+        <button name="Submit" type="submit">Sumbit</button>
+    </form>
+    <script>
+        function Validate() {
+            var name = document.forms["MyForm"]["name"].value;
+            var age = document.forms["MyForm"]["age"].value;
+
+            if ( age <=  18) {
+                alert("Age Cannot be lesser than 18")
+            }else {
+                alert ("Succesfully Login" )
+                return false;
+            }
+        };
+    </script>
+</body>
+
+</html>
